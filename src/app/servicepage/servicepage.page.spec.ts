@@ -1,0 +1,20 @@
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ServicepagePage } from './servicepage.page';
+import { waitForAsync } from '@angular/core/testing';
+
+describe('ServicepagePage', () => {
+  let component: ServicepagePage;
+  let fixture: ComponentFixture<ServicepagePage>;
+
+  
+
+  beforeEach(waitForAsync(() => {
+    fixture = TestBed.createComponent(ServicepagePage);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  }));
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});
