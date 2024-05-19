@@ -1,0 +1,33 @@
+<app-my-header name="Лабораторна робота №10"></app-my-header>
+
+<ion-content [fullscreen]="true">
+  <ion-item>
+    <ion-button (click)="nextCountry()">Наступна країна</ion-button>
+    <ion-label>
+        Поточна країна:
+    </ion-label>
+    <ion-label>
+        {{country.name}}
+    </ion-label>
+  </ion-item>
+  <ion-item *ngFor="let city of cityList.searchCityResult; let j = index">
+      {{city}}
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">Введіть нову країну</ion-label>
+    <ion-input #InputCountry></ion-input>
+    <ion-button (click)="addCountry(InputCountry.value)">Додати країну</ion-button>
+  </ion-item>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>
+        Додати місто
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-label position="stacked">Введіть назву</ion-label>
+      <ion-input #InputName></ion-input>
+      <ion-button (click)="addCity(InputName.value)">Додати місто</ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
